@@ -54,7 +54,7 @@ Can you also get the next question?""")
     st.code("mylist = [1, 2, 3]", language='python')
     st.markdown(""" The way we can add elements to a Python list is by using the append method. Let's say we wanted to add 4 to our list, we'd write:""")
     st.code("mylist.append(4)", language='python')
-    st.markdown(""" In the cell below, write Python code to add element 33 to `mylist` and click the Sumbit button.""")
+    st.markdown(""" In the cell below, write Python code to add element 33 to `mylist` and click the Submit button.""")
 
     mylist = [1,2,3]
     q1_code = st.text_area('', key='q1_text')
