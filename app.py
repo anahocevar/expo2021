@@ -1,12 +1,17 @@
 import streamlit as st
 import time
 
-def response(q, code, condition, congrats_gif, scoring, num_qs, mylist=[]):       
+def response(q, code, condition, congrats_gif, scoring, num_qs, mylist=[]): 
+    bad_ones = ['os', 'sys', 'glob', 'subprocess']
     if code=='Pass':
         st.session_state[q] = True, False
         return
 
     st.session_state[q] =  False, False
+    if any([bad in code for bad in bad_ones]):
+        st.markdown(""" Wrong answer, modify your code and submit again. Hint: if you can't get the right answer but nevertheless want to advance to the next question, you can enter `Pass` as your code and submit that. """)
+        return
+    
     try:
         exec(code)
     except Exception as e:
