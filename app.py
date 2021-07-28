@@ -24,7 +24,7 @@ def app():
         setattr(st.session_state, 'q'+str(i), getattr(st.session_state, 'q'+str(i), (False, False)))
     st.session_state.score = 0
 
-    st.title("BP EXPO 202101 Python coding challenge")
+    st.title("BP EXPO 2021 Python coding challenge")
     st.markdown(""" ## Welcome! 
     Want to test your Python coding skills? Let's get started! 
     """)
